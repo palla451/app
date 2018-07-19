@@ -73,6 +73,7 @@
             
             @foreach($bookingOptionals as $bookingOptional)
 
+
                 <form method="POST" action="{{ route('bookingoptionals.update',$bookingOptional->id )}}">
                     {!! csrf_field() !!}
                     <input name="_method" type="hidden" value="PATCH">
@@ -86,6 +87,7 @@
                     <h2 style="font-style: italic; color: #ffffff; text-align: center">Coffee / Lunch</h2>
 
                     @foreach($optionals as $optional)
+
 
                         @if($optional->column_name=='coffee_break'||$optional->column_name=='permanent_coffee'||$optional->column_name=='permanent_coffeeplus'||$optional->column_name=='integrazione_permanentcoffee'||$optional->column_name=='quick_lunch')
                             @if($optional->column_name=='coffee_break')
@@ -106,8 +108,8 @@
 
 
 
-                <div style="background-color: #00C0EF; height: 160px; padding-bottom: 15px">
-                    <h2 style="font-style: italic; color: #ffffff; text-align: center">Noleggio</h2>
+                    <div style="background-color: #00C0EF; height: 160px; padding-bottom: 15px">
+                        <h2 style="font-style: italic; color: #ffffff; text-align: center">Noleggio</h2>
                         @foreach($optionals as $optional)
 
                             @if($optional->column_name=='webconference'||
@@ -124,27 +126,27 @@
                             @else
                             @endif
                         @endforeach
-                </div>
+                    </div>
 
-                <div style="background-color: #DD4B39; height: 160px; padding-bottom: 15px;">
-                    <h2 style="font-style: italic; color: #ffffff; text-align: center">Connessioni</h2>
-                    @foreach($optionals as $optional)
-                        @if($optional->column_name=='connessione_viacavo'
-                            || $optional->column_name=='upgrade_banda10mb'
-                            || $optional->column_name=='upgrade_banda8mb'
-                            || $optional->column_name=='upgrade_banda20mb'
-                            || $optional->column_name=='wirless_4mb20accessi'
-                            || $optional->column_name=='wirless_8mb35accessi'
-                            || $optional->column_name=='wirless_10mb50accessi'
-                        )
-                            <div class="col-lg-3">
-                                <fieldset>{{ $optional->nome }}</fieldset>
-                                <input type="number" name="{{$optional->column_name}}" value="{{$bookingOptional[$optional->column_name]}}">
-                            </div>
-                        @else
-                        @endif
-                    @endforeach
-                </div>
+                    <div style="background-color: #DD4B39; height: 160px; padding-bottom: 15px;">
+                        <h2 style="font-style: italic; color: #ffffff; text-align: center">Connessioni</h2>
+                        @foreach($optionals as $optional)
+                            @if($optional->column_name=='connessione_viacavo'
+                                || $optional->column_name=='upgrade_banda10mb'
+                                || $optional->column_name=='upgrade_banda8mb'
+                                || $optional->column_name=='upgrade_banda20mb'
+                                || $optional->column_name=='wirless_4mb20accessi'
+                                || $optional->column_name=='wirless_8mb35accessi'
+                                || $optional->column_name=='wirless_10mb50accessi'
+                            )
+                                <div class="col-lg-3">
+                                    <fieldset>{{ $optional->nome }}</fieldset>
+                                    <input type="number" name="{{$optional->column_name}}" value="{{$bookingOptional[$optional->column_name]}}">
+                                </div>
+                            @else
+                            @endif
+                        @endforeach
+                    </div>
             @endforeach
 
                 <p class="col-sm-offset-0 col-sm-1" style="margin-top: 20px">

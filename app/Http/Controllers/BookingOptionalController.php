@@ -129,7 +129,9 @@ class BookingOptionalController extends Controller
 
     public function edit($id)
     {
-        $bookingOptionals = BookingOptional::find($id)->get();
+        $bookingOptionals = BookingOptional::where('booking_id','=',$id)->get();
+
+       // return $bookingOptionals;
         $optionals = Optional::all();
         $pageTitle = 'Optional Edit';
         $pageHeader = 'Optional Edit';
