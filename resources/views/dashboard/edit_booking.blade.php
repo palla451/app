@@ -83,7 +83,7 @@
                             <input type="hidden" name="_method" value="PUT">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                            <div class="form-group">
+                            <div class="form-group" style="display: none">
                                 <label for="id" class="col-sm-2 control-label">booked id</label>
                                 <div class="col-sm-6">
                                     <input value="{{ $booking->id }}" name="id" type="number" class="form-control" id="id" readonly>

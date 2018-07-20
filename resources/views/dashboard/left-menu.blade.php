@@ -63,7 +63,7 @@
             </li>
             @endability
 
-            @ability('superadmin|admin', '*-user')
+            @ability('superadmin', '*-security')
             <li{{ request()->segment(2) == 'users' ? ' class=active': '' }}>
                 <a href="{{ route('users.index') }}">
                     <i class="fa fa-users"></i> <span>{{ __('User Management') }}</span>
