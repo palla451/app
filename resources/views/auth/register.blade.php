@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/adminlte/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ url('/') }}/plugins/iCheck/square/blue.css">
-    <link rel="shortcut icon" href="{{ url('/') }}/img/favicon.png" type="image/x-icon">
-    <link rel="icon" href="{{ url('/') }}/img/pick_center.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url('/') }}/img/favicon.ico" type="image/x-icon">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
