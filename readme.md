@@ -1,3 +1,4 @@
-# Project Title
+# PickCenter Booking Online
 
-Room booking system based on Laravel 5.5 for PickCenter
+Upgrade Laravel from 5.5 to 5.6
+Room booking system based on Laravel 5.6 for PickCenter
