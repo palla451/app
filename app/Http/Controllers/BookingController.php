@@ -268,10 +268,12 @@ class BookingController extends Controller
         $booking = Booking::find($id);
         $user = User::find($booking->booked_by);
 
+     //   return $user->name;
+
         $booking->room_setup = $request->room_setup;
         // se è un utente registrato ad effetuare il booking
         if(is_null($request->booked_name))
-            $booking->booked_name = $user;
+            $booking->booked_name = $user->name;
          else
              // nel caso venga inserita da parte dell'admin
             $booking->booked_name = $request->booked_name;
